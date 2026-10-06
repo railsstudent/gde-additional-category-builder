@@ -1,4 +1,4 @@
 export default {
-  '*.{ts,js,mjs,html}': ['cspell', 'biome lint', 'biome format'],
-  '*.{json,css,md}': ['biome format'],
+  '*.{ts,js,mjs}': ['cspell', 'biome lint', 'biome format'],
+  '*.{json,md}': ['biome format'],
 };

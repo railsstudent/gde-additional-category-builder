@@ -33,18 +33,31 @@
         }
       },
       "style": {
+        "noUselessElse": "error",
         "useBlockStatements": "error",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": {
+            "syntax": "shorthand"
+          }
+        },
+        "useExportType": "error",
         "useFilenamingConvention": {
           "level": "error",
           "options": {
             "filenameCases": ["kebab-case"]
           }
         },
-        "useTemplate": "warn"
+        "useImportType": "error",
+        "useNodejsImportProtocol": "error",
+        "useTemplate": "warn",
+        "useThrowOnlyError": "error"
       },
       "suspicious": {
         "noAssignInExpressions": "error",
-        "noExplicitAny": "warn"
+        "noExplicitAny": "warn",
+        "noNonNullAssertedOptionalChain": "warn",
+        "noConsole": "error"
       },
       "nursery": {
         "noFloatingPromises": "error"

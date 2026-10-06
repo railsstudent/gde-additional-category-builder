@@ -18,7 +18,7 @@
     "additional category"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "cspell": "cspell --no-must-find-files --config cspell.config.mjs .",
     "knip": "knip --production",
     "format": "biome format --write",
@@ -32,6 +32,7 @@
     "cspell": "10.3.6",
     "husky": "9.1.7",
     "knip": "6.39.0",
-    "lint-staged": "17.6.0"
+    "lint-staged": "17.6.0",
+    "vitest": "5.0.3"
   }
 }
