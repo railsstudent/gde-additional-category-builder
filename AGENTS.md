@@ -62,6 +62,8 @@ Follow this directory layout when adding or modifying files:
 ## Development Workflow
 
 - **Planning**: `/to-spec` → `.scratch/<feature>/spec.md` → `/to-tickets` → `.scratch/<feature>/issues/`
+  - **Behavioral PRD Purity**: `spec.md` must strictly contain behavioral specifications and user stories ("what and why"). Architecture, SDK methods, data schemas, and technical trade-offs belong in `docs/adr/` ("how").
+  - **Phased Progression**: Never jump ahead to ticket creation (`/to-tickets`) or implementation without explicit user review and confirmation.
 - **Implementation Options**:
   - `/implement`: Single-agent, iterative step-by-step implementation using `tdd` at public seams (ideal for focused tickets, tight feedback loops, and learning-by-doing).
   - `/implement-spec`: Multi-subagent task-graph orchestrator running parallel worktrees (ideal for large independent task graphs).

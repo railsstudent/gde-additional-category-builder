@@ -6,6 +6,8 @@ export default defineConfig({
     'advocu',
     'filenaming',
     'fugu',
+    'googler',
+    'googlers',
     'keras',
     'leung',
     'modelcontextprotocol',
