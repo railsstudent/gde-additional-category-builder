@@ -5,6 +5,7 @@ This file provides context, rules, and technical constraints for AI assistants w
 ## Project Overview
 
 `gde-additional-category-builder` is an open-source plugin combining:
+
 1. **MCP Server**: Stdio-based Node.js service exposing tools to query Advocu activities, analyze category readiness, and serve bundled GDE documentation.
 2. **Skill (`skills/`)**: Prompt-driven workflow guiding the agent to discover categories, evaluate evidence, warn about the cooling-off period, and draft application dossiers.
 3. **Agent (`agents/`)**: Specialized "GDE Evaluation Mentor" system prompt.
@@ -38,7 +39,7 @@ Follow this directory layout when adding or modifying files:
    - NEVER use `console.log()` in `src/` (mechanically enforced via Biome `noConsole`). Standard output is strictly reserved for JSON-RPC messages. Always write debug logs to stderr using `console.error()`.
 
 3. **Error Handling via `McpError`**:
-   - Tool errors must throw `McpError` from `@modelcontextprotocol/sdk/types.js` with standard `ErrorCode` enums. Do not throw raw unhandled JavaScript `Error` objects.
+   - Tool errors must throw `McpError` from `@modelcontextprotocol/server` (or `@modelcontextprotocol/core`) with standard `ErrorCode` enums. Do not throw raw unhandled JavaScript `Error` objects.
 
 4. **Tool Schemas & Type Safety**:
    - Every MCP tool definition must use a **Zod** schema for runtime parameter validation.
@@ -66,7 +67,6 @@ Follow this directory layout when adding or modifying files:
   - `/implement-spec`: Multi-subagent task-graph orchestrator running parallel worktrees (ideal for large independent task graphs).
   - *Recommendation*: The agent evaluates task scope and proposes the suitable workflow (`/implement` vs `/implement-spec`) to the user before starting.
 - **Retrospective**: `/retro` to review what went well, bad, or awful in a coding session and suggest concrete improvements to the environment, guardrails, and navigation.
-
 
 ---
 

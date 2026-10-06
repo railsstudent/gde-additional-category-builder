@@ -1,10 +1,14 @@
 {
   "name": "gde-additional-category-builder",
   "version": "0.0.1",
+  "private": true,
   "author": "Connie Leung",
   "description": "GDE Additional Category Builder",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/server.js",
+  "imports": {
+    "#/*": "./dist/*"
+  },
   "directories": {
     "doc": "docs"
   },
@@ -18,7 +22,13 @@
     "additional category"
   ],
   "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsx src/server.ts",
+    "start": "node dist/server.js",
     "test": "vitest run",
+    "test:watch": "vitest",
     "cspell": "cspell --no-must-find-files --config cspell.config.mjs .",
     "knip": "knip --production",
     "format": "biome format --write",
@@ -29,10 +39,17 @@
     "@biomejs/biome": "2.5.15",
     "@commitlint/cli": "21.2.3",
     "@commitlint/config-conventional": "21.2.3",
+    "@types/node": "26.6.4",
     "cspell": "10.3.6",
     "husky": "9.1.7",
     "knip": "6.39.0",
     "lint-staged": "17.6.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
     "vitest": "5.0.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "zod": "4.6.5"
   }
 }

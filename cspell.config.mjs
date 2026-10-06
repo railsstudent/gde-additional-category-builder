@@ -2,6 +2,17 @@ import { defineConfig } from 'cspell';
 
 export default defineConfig({
   version: '0.2',
-  ignoreWords: ['advocu', 'leung', 'wayfinder', 'wayfinding'],
+  ignoreWords: [
+    'advocu',
+    'filenaming',
+    'fugu',
+    'keras',
+    'leung',
+    'modelcontextprotocol',
+    'stdio',
+    'wayfinder',
+    'wayfinding',
+    'worktrees',
+  ],
   ignorePaths: ['node_modules', 'dist', 'coverage', '.git', '.vscode', '.idea', '*.spec.ts', 'skills-lock.json'],
 });

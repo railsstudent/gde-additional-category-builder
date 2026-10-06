@@ -51,13 +51,29 @@
         "useImportType": "error",
         "useNodejsImportProtocol": "error",
         "useTemplate": "warn",
-        "useThrowOnlyError": "error"
+        "useThrowOnlyError": "error",
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "patterns": [
+              {
+                "group": ["../*", "../**"],
+                "message": "Avoid parent relative imports ('../'). Use path aliases or same-directory imports ('./')."
+              }
+            ]
+          }
+        }
       },
       "suspicious": {
         "noAssignInExpressions": "error",
         "noExplicitAny": "warn",
         "noNonNullAssertedOptionalChain": "warn",
-        "noConsole": "error"
+        "noConsole": {
+          "level": "error",
+          "options": {
+            "allow": ["error", "warn"]
+          }
+        }
       },
       "nursery": {
         "noFloatingPromises": "error"
