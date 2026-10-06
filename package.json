@@ -1,37 +1,37 @@
 {
-	"name": "gde-additional-category-builder",
-	"version": "0.0.1",
-	"author": "Connie Leung",
-	"description": "GDE Additional Category Builder",
-	"type": "module",
-	"main": "index.js",
-	"directories": {
-		"doc": "docs"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/railsstudent/gde-additional-category-builder.git"
-	},
-	"keywords": [
-		"GDE",
-		"advocu",
-		"additional category"
-	],
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"cspell": "cspell --no-must-find-files --config cspell.config.mjs .",
-		"knip": "knip --production",
-		"format": "biome format --write",
-		"lint": "biome lint --write",
-		"prepare": "husky"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.5.15",
-		"@commitlint/cli": "21.2.3",
-		"@commitlint/config-conventional": "21.2.3",
-		"cspell": "10.3.6",
-		"husky": "9.1.7",
-		"knip": "6.39.0",
-		"lint-staged": "17.6.0"
-	}
+  "name": "gde-additional-category-builder",
+  "version": "0.0.1",
+  "author": "Connie Leung",
+  "description": "GDE Additional Category Builder",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/railsstudent/gde-additional-category-builder.git"
+  },
+  "keywords": [
+    "GDE",
+    "advocu",
+    "additional category"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cspell": "cspell --no-must-find-files --config cspell.config.mjs .",
+    "knip": "knip --production",
+    "format": "biome format --write",
+    "lint": "biome lint --write",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@commitlint/cli": "21.2.3",
+    "@commitlint/config-conventional": "21.2.3",
+    "cspell": "10.3.6",
+    "husky": "9.1.7",
+    "knip": "6.39.0",
+    "lint-staged": "17.6.0"
+  }
 }
